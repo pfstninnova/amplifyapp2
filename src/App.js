@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './innova_films.gif';
 import './App.css';
+import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
 
 function App() {
   return (
@@ -17,9 +18,11 @@ function App() {
         >
           Regards from Perfilstone Innova
         </a></p>
+        <h1>Authentication</h1>
       </header>
+      <AmplifySignOut />
     </div>
   );
 }
 
-export default App;
+export default withAuthenticator(App);
